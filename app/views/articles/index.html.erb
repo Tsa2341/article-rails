@@ -1,0 +1,12 @@
+<h1>This is the index file</h1>
+<ol>
+  <% @articles.each do |article| %>
+    <li>
+      <%= link_to article.title ? article.title.capitalize : "Undefined Title", article %>
+    </li>
+  <% end %>
+</ol>
+
+<button>
+  <a href="/articles/new">Create new Article</a>
+</button>

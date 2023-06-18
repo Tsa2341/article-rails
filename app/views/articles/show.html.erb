@@ -1,0 +1,22 @@
+<nav>
+  <a href="/articles">Click to go Back to Home</a>
+</nav>
+
+<fieldset>
+  <legend>
+    <i>This is the show file</i>
+  </legend>
+  <h2><%= @article.title || "Undefined title" %></h2>
+  <p><%= @article.body %></p>
+
+  <button>
+    <%= link_to "Edit", edit_article_path(@article) %>
+  </button>
+  <button>
+    <%= link_to "Destroy", article_path(@article), data: {
+      turbo_method: :delete,
+      turbo_confirm: "Are you sure?"
+    } %>
+  </button>
+
+</legend>
